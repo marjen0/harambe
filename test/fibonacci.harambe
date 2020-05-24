@@ -1,0 +1,74 @@
+/..
+CREATE FILE
+../
+string fn = "fib.txt"
+createfile(fn)
+
+~ELEMENTS OUT
+int n = 10
+
+/..
+FIBONACCI RECURSIVE:
+../
+@ FibonacciRecursive (int x) >> int
+</
+	if (x ==0)
+	</
+		>> x
+	/>
+	if (x == 1)
+	</
+		>> x
+	/>	
+	>> FibonacciRecursive ( x - 1 ) + FibonacciRecursive ( x - 2 )
+	
+/>
+
+/..
+FIBONACCI INTERATIVE:
+../
+@ FibonacciInterative (int n) >> int
+</
+	int x1 = 0
+	int x2 = 1
+	int i = 0
+	while (i < n)
+	</
+		int temp = x1
+		x1 = x2
+		x2 = x2 + temp
+		i = i + 1
+	/>
+	>> x1
+/>
+
+int fib = 0
+int i = 0
+displayln("\nFibonacci recursive: %d", n)
+appendfilestring(fn, "\nFibonacci recursive:")
+while (i<n)
+</
+	fib =FibonacciRecursive(i)
+	displayln("%d", fib)
+	appendfilestring(fn, "\n")
+	appendfileinteger(fn, fib)
+	i = i +1
+/>
+
+displayln("\nFibonacci interative: %d", n)
+appendfilestring(fn, "\nFibonacci interative:\n")
+
+i = 0
+while (i < n)
+</
+	fib =FibonacciInterative(i)
+	displayln("%d", fib)
+	appendfilestring(fn, "\n")
+	appendfileinteger(fn, fib)
+	i = i + 1
+/>
+
+
+
+
+
