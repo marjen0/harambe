@@ -67,10 +67,10 @@ RM = /snap/cmake/340/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/marijus/Documents/KTU_2019_PKT2
+CMAKE_SOURCE_DIR = /home/marijus/Documents/harambe
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/marijus/Documents/KTU_2019_PKT2/build
+CMAKE_BINARY_DIR = /home/marijus/Documents/harambe/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -98,14 +98,14 @@ clean: CMakeFiles/intrinsics_gen.dir/clean
 CMakeFiles/harambe.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/harambe.dir/build.make CMakeFiles/harambe.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/harambe.dir/build.make CMakeFiles/harambe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target harambe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target harambe"
 .PHONY : CMakeFiles/harambe.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/harambe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/marijus/Documents/harambe/build/CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/harambe.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/marijus/Documents/harambe/build/CMakeFiles 0
 .PHONY : CMakeFiles/harambe.dir/rule
 
 # Convenience name for target.
@@ -125,14 +125,14 @@ CMakeFiles/harambe.dir/clean:
 CMakeFiles/intrinsics_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/intrinsics_gen.dir/build.make CMakeFiles/intrinsics_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/intrinsics_gen.dir/build.make CMakeFiles/intrinsics_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num= "Built target intrinsics_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num= "Built target intrinsics_gen"
 .PHONY : CMakeFiles/intrinsics_gen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/intrinsics_gen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/marijus/Documents/harambe/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/intrinsics_gen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/marijus/Documents/harambe/build/CMakeFiles 0
 .PHONY : CMakeFiles/intrinsics_gen.dir/rule
 
 # Convenience name for target.

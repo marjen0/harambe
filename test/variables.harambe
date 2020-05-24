@@ -1,0 +1,2 @@
+int x1 = 5
+displayln("x1=%d",x1)

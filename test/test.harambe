@@ -6,8 +6,8 @@ its long comment also
 displayln("IT'S LONG COMMENT ALSO")
 ../
 
-~it's one line comment
-~displayln("IT'S ONE LINE COMMENT")
+`it's one line comment
+`displayln("IT'S ONE LINE COMMENT")
 
 string a = "Hello1"
 displayln(a)
@@ -26,7 +26,7 @@ displayln("x3=%d",x3)
 double x4 = 0.5 * 0.7
 displayln("x4=%f",x4)
 
-~double numbers must be bouble structure : 00.0
+`double numbers must be bouble structure : 00.0
 double x5 = 4.0 * 5.0
 displayln("x5=%f",x5)
 
@@ -38,38 +38,38 @@ displayln("x7=%f",x7)
 
 displayln("%d",7+5)
 
-~example of if:
+`example of if:
 displayln("EXAMPLE OF IF")
 int x8 = 6
 display("x8=%d\n",x8)
 if (x8 < 6) 
-</
+{
 	x8 = x8 + 6 
 	x8 = x8 * 2
 	printvalue(x8)
-/>
+}
 else
-</
+{
 	x8=4
-/>
+}
 displayln("x8=%d",x8)
 int x9 = (x1*x2)/x2
 displayln("x9=(x1*x2)/x2=%d",x9)
 
-~example of while:
+`example of while:
 displayln("EXAMPLE OF WHILE")
 int y1 = 10
 int y2 = 7
 displayln("y1=%d, y2=%d",y1, y2)
 while (y1 > y2)
-</
+{
    	y1 = y1 - 1
    	printvalue(y1)
-/>
+}
 else
-</
+{
   	displayln("y1>%d is equal to %d",y2, y1>20)
-/>
+}
 
 string fn = "test.txt"
 createfile(fn)
@@ -87,18 +87,18 @@ double v2 = 9.5
 displayln("less double from %f & %f is %f",v1, v2, lessdouble(v1,v2))
 
 
-~#debugstart
-@ Sum (double a) >> double
-</
-	>> a + a
-/>
+`#debugstart
+function Sum (double a) return double
+{
+	return a + a
+}
 
-@ Minus (double a, double b) >> double
-</
+function Minus (double a, double b) return double
+{
 	double sum = Sum (a)
-	>> lessdouble(sum,b*2)
-/>
-~#debugend
+	return lessdouble(sum,b*2)
+}
+`#debugend
 
 displayln("Result %f", Minus (8.0, 9.0))
 

@@ -166,14 +166,14 @@ import			BEGIN(incl);
 "else"			return TOKEN(TELSE);
 "#debugstart"		return TOKEN(DEBUGSTART);
 "#debugend"		return TOKEN(DEBUGEND);
-"</"			return TOKEN(TBLOCKSTART);
-"/>"			return TOKEN(TBLOCKEND);
-">>"[ \t]*[\n]		return TOKEN(TRETURN_SIMPLE); 	/*return*/
-">>"			return TOKEN(TRETURN);		/*return*/
+"{"			return TOKEN(TBLOCKSTART);
+"}"			return TOKEN(TBLOCKEND);
+"return"[ \t]*[\n]		return TOKEN(TRETURN_SIMPLE); 	/*return*/
+"return"			return TOKEN(TRETURN);		/*return*/
 "!!"			return TOKEN(TNOT); 		/*not*/
 "&&"			return TOKEN(TAND); 		/*and*/
 "||"			return TOKEN(TOR); 		/*or*/
-"@"			return TOKEN(TDEF); 		/*@ - to call a function*/
+"function"			return TOKEN(TDEF); 		/*@ - to call a function*/
 "var"			return TOKEN(TVAR);
 "while"			return TOKEN(TWHILE);
 	/* "createfile"		return TOKEN(TCREATEFILE); */	/*create file*/
@@ -182,7 +182,7 @@ import			BEGIN(incl);
 "true"			SAVE_TOKEN; return TBOOL;
 "false"			SAVE_TOKEN; return TBOOL;
 "to"			return TOKEN(TTO);
-~.*	 		/* comments one line til nl */
+`.*	 		/* comments one line til nl */
 [ \t\n]			/* ignore */;
 [a-zA-Z_][a-zA-Z0-9_&%\$\?\-]*	SAVE_TOKEN; return TIDENTIFIER;
 -?[0-9]+		SAVE_TOKEN; return TINTEGER;
@@ -191,7 +191,7 @@ import			BEGIN(incl);
 "::"			return TOKEN(TRANGE);
 "="	 		return TOKEN(TEQUAL);
 "=="			return TOKEN(TCEQ);
-"<>"			return TOKEN(TCNE);
+"!="			return TOKEN(TCNE);
 "=<"			return TOKEN(TLTLT); 	/*array_add_element*/
 "<"	 		return TOKEN(TCLO); 	/*comparison lower*/
 "<="			return TOKEN(TCLE);	/*comparison lower equal*/

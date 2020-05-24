@@ -102,7 +102,7 @@
     while (0)
 
 
-#line 106 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 106 "/home/marijus/Documents/harambe/build/parser.cpp"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -135,8 +135,8 @@
 
 /* Use api.header.include to #include this header
    instead of duplicating it here.  */
-#ifndef YY_YY_HOME_MARIJUS_DOCUMENTS_KTU_2019_PKT2_BUILD_PARSER_HPP_INCLUDED
-# define YY_YY_HOME_MARIJUS_DOCUMENTS_KTU_2019_PKT2_BUILD_PARSER_HPP_INCLUDED
+#ifndef YY_YY_HOME_MARIJUS_DOCUMENTS_HARAMBE_BUILD_PARSER_HPP_INCLUDED
+# define YY_YY_HOME_MARIJUS_DOCUMENTS_HARAMBE_BUILD_PARSER_HPP_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 1
@@ -151,7 +151,7 @@ extern int yydebug;
 # define YYLTYPE_IS_DECLARED 1 /* alert the parser that we have our own definition */
 
 
-#line 155 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 155 "/home/marijus/Documents/harambe/build/parser.cpp"
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
@@ -222,7 +222,7 @@ union YYSTYPE
 			int token;		
 		
 
-#line 226 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 226 "/home/marijus/Documents/harambe/build/parser.cpp"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -249,7 +249,7 @@ extern YYSTYPE yylval;
 extern YYLTYPE yylloc;
 int yyparse (void);
 
-#endif /* !YY_YY_HOME_MARIJUS_DOCUMENTS_KTU_2019_PKT2_BUILD_PARSER_HPP_INCLUDED  */
+#endif /* !YY_YY_HOME_MARIJUS_DOCUMENTS_HARAMBE_BUILD_PARSER_HPP_INCLUDED  */
 
 
 
@@ -1633,311 +1633,311 @@ yyreduce:
   case 2:
 #line 95 "parser.y"
                               { programBlock = new harambe::Block(); }
-#line 1637 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1637 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 3:
 #line 96 "parser.y"
                         { programBlock = (yyvsp[0].block); }
-#line 1643 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1643 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 4:
 #line 99 "parser.y"
                        { (yyval.block) = new harambe::Block(); (yyval.block)->statements.push_back((yyvsp[0].stmt)); }
-#line 1649 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1649 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 5:
 #line 100 "parser.y"
                              { (yyvsp[-1].block)->statements.push_back((yyvsp[0].stmt)); }
-#line 1655 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1655 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 14:
 #line 111 "parser.y"
                        { (yyval.stmt) = new harambe::ExpressionStatement((yyvsp[0].expr)); }
-#line 1661 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1661 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 15:
 #line 114 "parser.y"
                                               { (yyval.block) = (yyvsp[-1].block); }
-#line 1667 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1667 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 16:
 #line 115 "parser.y"
                                         { (yyval.block) = new harambe::Block(); }
-#line 1673 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1673 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 17:
 #line 122 "parser.y"
                                                              {(yyval.stmt) = new harambe::Conditional((yyvsp[-4].expr),(yyvsp[-2].block),(yyvsp[0].block));}
-#line 1679 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1679 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 18:
 #line 123 "parser.y"
                                                  {(yyval.stmt) = new harambe::Conditional((yyvsp[-2].expr),(yyvsp[0].block));}
-#line 1685 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1685 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 19:
 #line 126 "parser.y"
                                                                 {(yyval.stmt) = new harambe::WhileLoop((yyvsp[-4].expr),(yyvsp[-2].block),(yyvsp[0].block));}
-#line 1691 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1691 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 20:
 #line 127 "parser.y"
                                                     {(yyval.stmt) = new harambe::WhileLoop((yyvsp[-2].expr),(yyvsp[0].block));}
-#line 1697 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1697 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 21:
 #line 130 "parser.y"
                               { (yyval.stmt) = new harambe::VariableDeclaration((yyvsp[-1].ident), (yyvsp[0].ident), (yyloc)); }
-#line 1703 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1703 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 22:
 #line 131 "parser.y"
                                           { (yyval.stmt) = new harambe::VariableDeclaration((yyvsp[-3].ident), (yyvsp[-2].ident), (yyvsp[0].expr), (yyloc)); }
-#line 1709 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1709 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 23:
 #line 134 "parser.y"
                                          { (yyval.stmt) = new harambe::VariableDeclarationDeduce((yyvsp[-2].ident), (yyvsp[0].expr), (yyloc)); }
-#line 1715 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1715 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 24:
 #line 137 "parser.y"
                                                                                 { (yyval.stmt) = new harambe::FunctionDeclaration((yyvsp[-1].ident), (yyvsp[-6].ident), (yyvsp[-4].varvec), (yyvsp[0].block), (yyloc)); }
-#line 1721 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1721 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 25:
 #line 138 "parser.y"
                                                                   { (yyval.stmt) = new harambe::FunctionDeclaration((yyvsp[-4].ident), (yyvsp[-2].varvec), (yyvsp[0].block), (yyloc)); }
-#line 1727 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1727 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 26:
 #line 141 "parser.y"
                              { (yyval.varvec) = new harambe::VariableList(); }
-#line 1733 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1733 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 27:
 #line 142 "parser.y"
                            { (yyval.varvec) = new harambe::VariableList(); (yyval.varvec)->push_back((yyvsp[0].var_decl)); }
-#line 1739 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1739 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 28:
 #line 143 "parser.y"
                                                  { (yyvsp[-2].varvec)->push_back((yyvsp[0].var_decl)); }
-#line 1745 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1745 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 29:
 #line 146 "parser.y"
                                    {(yyval.stmt) = new harambe::ClassDeclaration((yyvsp[-1].ident), (yyvsp[0].block)); }
-#line 1751 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1751 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 30:
 #line 149 "parser.y"
                               { (yyval.ident) = new harambe::Identifier(*(yyvsp[0].string), (yylsp[0])); delete (yyvsp[0].string); }
-#line 1757 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1757 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 31:
 #line 150 "parser.y"
                                                { (yyval.ident) = new harambe::Identifier(*(yyvsp[-2].string),*(yyvsp[0].string), (yyloc)); delete (yyvsp[-2].string); delete (yyvsp[0].string);}
-#line 1763 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1763 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 32:
 #line 153 "parser.y"
                            { (yyval.expr) = new harambe::Integer(atol((yyvsp[0].string)->c_str())); delete (yyvsp[0].string); }
-#line 1769 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1769 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 33:
 #line 154 "parser.y"
                           { (yyval.expr) = new harambe::Double(atof((yyvsp[0].string)->c_str())); delete (yyvsp[0].string); }
-#line 1775 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1775 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 34:
 #line 155 "parser.y"
                        { (yyval.expr) = new harambe::String(*(yyvsp[0].string)); delete (yyvsp[0].string); }
-#line 1781 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1781 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 35:
 #line 156 "parser.y"
                         { (yyval.expr) = new harambe::Boolean(*(yyvsp[0].string)); delete (yyvsp[0].string); }
-#line 1787 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1787 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 36:
 #line 160 "parser.y"
                                { (yyval.stmt) = new harambe::Return((yyloc), (yyvsp[0].expr)); }
-#line 1793 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1793 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 37:
 #line 161 "parser.y"
                                  { (yyval.stmt) = new harambe::Return((yyloc)); }
-#line 1799 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1799 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 38:
 #line 164 "parser.y"
                                     { (yyval.expr) = new harambe::Assignment((yyvsp[-2].ident), (yyvsp[0].expr), (yyloc)); }
-#line 1805 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1805 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 39:
 #line 165 "parser.y"
                                                   { (yyval.expr) = new harambe::MethodCall((yyvsp[-3].ident), (yyvsp[-1].exprvec), (yyloc));  }
-#line 1811 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1811 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 40:
 #line 166 "parser.y"
                         { (yyval.ident) = (yyvsp[0].ident); }
-#line 1817 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1817 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 45:
 #line 171 "parser.y"
                                        { (yyval.expr) = (yyvsp[-1].expr); }
-#line 1823 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1823 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 49:
 #line 177 "parser.y"
                                  { (yyval.expr) = new harambe::BinaryOp((yyvsp[-2].expr), (yyvsp[-1].token), (yyvsp[0].expr), (yyloc)); }
-#line 1829 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1829 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 50:
 #line 178 "parser.y"
                                 { (yyval.expr) = new harambe::BinaryOp((yyvsp[-2].expr), (yyvsp[-1].token), (yyvsp[0].expr), (yyloc)); }
-#line 1835 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1835 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 51:
 #line 179 "parser.y"
                                   { (yyval.expr) = new harambe::BinaryOp((yyvsp[-2].expr), (yyvsp[-1].token), (yyvsp[0].expr), (yyloc)); }
-#line 1841 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1841 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 52:
 #line 180 "parser.y"
                                    { (yyval.expr) = new harambe::BinaryOp((yyvsp[-2].expr), (yyvsp[-1].token), (yyvsp[0].expr), (yyloc)); }
-#line 1847 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1847 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 53:
 #line 181 "parser.y"
                                  { (yyval.expr) = new harambe::BinaryOp((yyvsp[-2].expr), (yyvsp[-1].token), (yyvsp[0].expr), (yyloc)); }
-#line 1853 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1853 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 54:
 #line 182 "parser.y"
                                  { (yyval.expr) = new harambe::BinaryOp((yyvsp[-2].expr), (yyvsp[-1].token), (yyvsp[0].expr), (yyloc)); }
-#line 1859 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1859 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 55:
 #line 185 "parser.y"
                             { (yyval.expr) = new harambe::UnaryOperator((yyvsp[-1].token), (yyvsp[0].expr)); }
-#line 1865 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1865 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 56:
 #line 188 "parser.y"
                                        { (yyval.expr) = new harambe::CompOperator((yyvsp[-2].expr), (yyvsp[-1].token), (yyvsp[0].expr)); }
-#line 1871 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1871 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 57:
 #line 191 "parser.y"
                              { (yyval.exprvec) = new harambe::ExpressionList(); }
-#line 1877 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1877 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 58:
 #line 192 "parser.y"
                        { (yyval.exprvec) = new harambe::ExpressionList(); (yyval.exprvec)->push_back((yyvsp[0].expr)); }
-#line 1883 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1883 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 59:
 #line 193 "parser.y"
                                          { (yyvsp[-2].exprvec)->push_back((yyvsp[0].expr)); }
-#line 1889 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1889 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 66:
 #line 199 "parser.y"
                                 {(yyval.exprvec) = new harambe::ExpressionList(); }
-#line 1895 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1895 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 67:
 #line 200 "parser.y"
                        {(yyval.exprvec) = new harambe::ExpressionList(); (yyval.exprvec)->push_back((yyvsp[0].expr));}
-#line 1901 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1901 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 68:
 #line 201 "parser.y"
                                                  {(yyval.exprvec)->push_back((yyvsp[0].expr)); }
-#line 1907 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1907 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 69:
 #line 204 "parser.y"
                                                          {(yyval.expr) = new harambe::Array((yyvsp[-1].exprvec), (yyloc));}
-#line 1913 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1913 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 70:
 #line 207 "parser.y"
                                     { (yyval.stmt) = new harambe::ArrayAddElement((yyvsp[-2].ident), (yyvsp[0].expr), (yyloc)); }
-#line 1919 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1919 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 71:
 #line 210 "parser.y"
                                                      { (yyval.expr) = new harambe::ArrayAccess((yyvsp[-3].ident),atol((yyvsp[-1].string)->c_str()), (yyloc)); delete (yyvsp[-1].string);}
-#line 1925 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1925 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 72:
 #line 211 "parser.y"
                                                             { (yyval.expr) = new harambe::ArrayAccess((yyvsp[-3].expr),atol((yyvsp[-1].string)->c_str()), (yyloc)); delete (yyvsp[-1].string);}
-#line 1931 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1931 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
   case 73:
 #line 214 "parser.y"
                                                        {(yyval.expr) = new harambe::Range((yyvsp[-3].expr), (yyvsp[-1].expr), (yyloc));}
-#line 1937 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1937 "/home/marijus/Documents/harambe/build/parser.cpp"
     break;
 
 
-#line 1941 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp"
+#line 1941 "/home/marijus/Documents/harambe/build/parser.cpp"
 
       default: break;
     }

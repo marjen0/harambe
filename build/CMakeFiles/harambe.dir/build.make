@@ -66,10 +66,10 @@ RM = /snap/cmake/340/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/marijus/Documents/KTU_2019_PKT2
+CMAKE_SOURCE_DIR = /home/marijus/Documents/harambe
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/marijus/Documents/KTU_2019_PKT2/build
+CMAKE_BINARY_DIR = /home/marijus/Documents/harambe/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/harambe.dir/depend.make
@@ -81,198 +81,198 @@ include CMakeFiles/harambe.dir/progress.make
 include CMakeFiles/harambe.dir/flags.make
 
 parser.cpp: ../parser.y
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BISON][Parser] Building parser with bison 3.5.1"
-	cd /home/marijus/Documents/KTU_2019_PKT2 && /usr/bin/bison -d -o /home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp parser.y
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BISON][Parser] Building parser with bison 3.5.1"
+	cd /home/marijus/Documents/harambe && /usr/bin/bison -d -o /home/marijus/Documents/harambe/build/parser.cpp parser.y
 
 parser.hpp: parser.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate parser.hpp
 
 tokens.cpp: ../tokens.l
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[FLEX][Scanner] Building scanner with flex 2.6.4"
-	cd /home/marijus/Documents/KTU_2019_PKT2 && /usr/bin/flex -o/home/marijus/Documents/KTU_2019_PKT2/build/tokens.cpp tokens.l
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[FLEX][Scanner] Building scanner with flex 2.6.4"
+	cd /home/marijus/Documents/harambe && /usr/bin/flex -o/home/marijus/Documents/harambe/build/tokens.cpp tokens.l
 
 CMakeFiles/harambe.dir/main.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/harambe.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/main.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/harambe.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/main.cpp.o -c /home/marijus/Documents/harambe/main.cpp
 
 CMakeFiles/harambe.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/main.cpp > CMakeFiles/harambe.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/main.cpp > CMakeFiles/harambe.dir/main.cpp.i
 
 CMakeFiles/harambe.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/main.cpp -o CMakeFiles/harambe.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/main.cpp -o CMakeFiles/harambe.dir/main.cpp.s
 
 CMakeFiles/harambe.dir/buildins.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/buildins.cpp.o: ../buildins.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/harambe.dir/buildins.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/buildins.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/buildins.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/harambe.dir/buildins.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/buildins.cpp.o -c /home/marijus/Documents/harambe/buildins.cpp
 
 CMakeFiles/harambe.dir/buildins.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/buildins.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/buildins.cpp > CMakeFiles/harambe.dir/buildins.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/buildins.cpp > CMakeFiles/harambe.dir/buildins.cpp.i
 
 CMakeFiles/harambe.dir/buildins.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/buildins.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/buildins.cpp -o CMakeFiles/harambe.dir/buildins.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/buildins.cpp -o CMakeFiles/harambe.dir/buildins.cpp.s
 
 CMakeFiles/harambe.dir/AstNode.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/AstNode.cpp.o: ../AstNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/harambe.dir/AstNode.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/AstNode.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/AstNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/harambe.dir/AstNode.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/AstNode.cpp.o -c /home/marijus/Documents/harambe/AstNode.cpp
 
 CMakeFiles/harambe.dir/AstNode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/AstNode.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/AstNode.cpp > CMakeFiles/harambe.dir/AstNode.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/AstNode.cpp > CMakeFiles/harambe.dir/AstNode.cpp.i
 
 CMakeFiles/harambe.dir/AstNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/AstNode.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/AstNode.cpp -o CMakeFiles/harambe.dir/AstNode.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/AstNode.cpp -o CMakeFiles/harambe.dir/AstNode.cpp.s
 
 CMakeFiles/harambe.dir/Declaration.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/Declaration.cpp.o: ../Declaration.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/harambe.dir/Declaration.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/Declaration.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/Declaration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/harambe.dir/Declaration.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/Declaration.cpp.o -c /home/marijus/Documents/harambe/Declaration.cpp
 
 CMakeFiles/harambe.dir/Declaration.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/Declaration.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/Declaration.cpp > CMakeFiles/harambe.dir/Declaration.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/Declaration.cpp > CMakeFiles/harambe.dir/Declaration.cpp.i
 
 CMakeFiles/harambe.dir/Declaration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/Declaration.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/Declaration.cpp -o CMakeFiles/harambe.dir/Declaration.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/Declaration.cpp -o CMakeFiles/harambe.dir/Declaration.cpp.s
 
 CMakeFiles/harambe.dir/FunctionDeclaration.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/FunctionDeclaration.cpp.o: ../FunctionDeclaration.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/harambe.dir/FunctionDeclaration.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/FunctionDeclaration.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/FunctionDeclaration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/harambe.dir/FunctionDeclaration.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/FunctionDeclaration.cpp.o -c /home/marijus/Documents/harambe/FunctionDeclaration.cpp
 
 CMakeFiles/harambe.dir/FunctionDeclaration.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/FunctionDeclaration.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/FunctionDeclaration.cpp > CMakeFiles/harambe.dir/FunctionDeclaration.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/FunctionDeclaration.cpp > CMakeFiles/harambe.dir/FunctionDeclaration.cpp.i
 
 CMakeFiles/harambe.dir/FunctionDeclaration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/FunctionDeclaration.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/FunctionDeclaration.cpp -o CMakeFiles/harambe.dir/FunctionDeclaration.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/FunctionDeclaration.cpp -o CMakeFiles/harambe.dir/FunctionDeclaration.cpp.s
 
 CMakeFiles/harambe.dir/ClassDeclaration.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/ClassDeclaration.cpp.o: ../ClassDeclaration.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/harambe.dir/ClassDeclaration.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/ClassDeclaration.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/ClassDeclaration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/harambe.dir/ClassDeclaration.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/ClassDeclaration.cpp.o -c /home/marijus/Documents/harambe/ClassDeclaration.cpp
 
 CMakeFiles/harambe.dir/ClassDeclaration.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/ClassDeclaration.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/ClassDeclaration.cpp > CMakeFiles/harambe.dir/ClassDeclaration.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/ClassDeclaration.cpp > CMakeFiles/harambe.dir/ClassDeclaration.cpp.i
 
 CMakeFiles/harambe.dir/ClassDeclaration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/ClassDeclaration.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/ClassDeclaration.cpp -o CMakeFiles/harambe.dir/ClassDeclaration.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/ClassDeclaration.cpp -o CMakeFiles/harambe.dir/ClassDeclaration.cpp.s
 
 CMakeFiles/harambe.dir/CodeGenContext.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/CodeGenContext.cpp.o: ../CodeGenContext.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/harambe.dir/CodeGenContext.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/CodeGenContext.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/CodeGenContext.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/harambe.dir/CodeGenContext.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/CodeGenContext.cpp.o -c /home/marijus/Documents/harambe/CodeGenContext.cpp
 
 CMakeFiles/harambe.dir/CodeGenContext.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/CodeGenContext.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/CodeGenContext.cpp > CMakeFiles/harambe.dir/CodeGenContext.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/CodeGenContext.cpp > CMakeFiles/harambe.dir/CodeGenContext.cpp.i
 
 CMakeFiles/harambe.dir/CodeGenContext.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/CodeGenContext.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/CodeGenContext.cpp -o CMakeFiles/harambe.dir/CodeGenContext.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/CodeGenContext.cpp -o CMakeFiles/harambe.dir/CodeGenContext.cpp.s
 
 CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.o: ../VisitorSyntaxCheck.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/VisitorSyntaxCheck.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.o -c /home/marijus/Documents/harambe/VisitorSyntaxCheck.cpp
 
 CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/VisitorSyntaxCheck.cpp > CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/VisitorSyntaxCheck.cpp > CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.i
 
 CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/VisitorSyntaxCheck.cpp -o CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/VisitorSyntaxCheck.cpp -o CMakeFiles/harambe.dir/VisitorSyntaxCheck.cpp.s
 
 CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.o: ../VisitorPrettyPrint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/VisitorPrettyPrint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.o -c /home/marijus/Documents/harambe/VisitorPrettyPrint.cpp
 
 CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/VisitorPrettyPrint.cpp > CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/VisitorPrettyPrint.cpp > CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.i
 
 CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/VisitorPrettyPrint.cpp -o CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/VisitorPrettyPrint.cpp -o CMakeFiles/harambe.dir/VisitorPrettyPrint.cpp.s
 
 CMakeFiles/harambe.dir/GetOpt.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/GetOpt.cpp.o: ../GetOpt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/harambe.dir/GetOpt.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/GetOpt.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/GetOpt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/harambe.dir/GetOpt.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/GetOpt.cpp.o -c /home/marijus/Documents/harambe/GetOpt.cpp
 
 CMakeFiles/harambe.dir/GetOpt.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/GetOpt.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/GetOpt.cpp > CMakeFiles/harambe.dir/GetOpt.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/GetOpt.cpp > CMakeFiles/harambe.dir/GetOpt.cpp.i
 
 CMakeFiles/harambe.dir/GetOpt.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/GetOpt.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/GetOpt.cpp -o CMakeFiles/harambe.dir/GetOpt.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/GetOpt.cpp -o CMakeFiles/harambe.dir/GetOpt.cpp.s
 
 CMakeFiles/harambe.dir/Array.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/Array.cpp.o: ../Array.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/harambe.dir/Array.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/Array.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/Array.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/harambe.dir/Array.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/Array.cpp.o -c /home/marijus/Documents/harambe/Array.cpp
 
 CMakeFiles/harambe.dir/Array.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/Array.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/Array.cpp > CMakeFiles/harambe.dir/Array.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/Array.cpp > CMakeFiles/harambe.dir/Array.cpp.i
 
 CMakeFiles/harambe.dir/Array.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/Array.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/Array.cpp -o CMakeFiles/harambe.dir/Array.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/Array.cpp -o CMakeFiles/harambe.dir/Array.cpp.s
 
 CMakeFiles/harambe.dir/Range.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/Range.cpp.o: ../Range.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/harambe.dir/Range.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/Range.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/Range.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/harambe.dir/Range.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/Range.cpp.o -c /home/marijus/Documents/harambe/Range.cpp
 
 CMakeFiles/harambe.dir/Range.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/Range.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/Range.cpp > CMakeFiles/harambe.dir/Range.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/Range.cpp > CMakeFiles/harambe.dir/Range.cpp.i
 
 CMakeFiles/harambe.dir/Range.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/Range.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/Range.cpp -o CMakeFiles/harambe.dir/Range.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/Range.cpp -o CMakeFiles/harambe.dir/Range.cpp.s
 
 CMakeFiles/harambe.dir/parser.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/parser.cpp.o: parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/harambe.dir/parser.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/parser.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/harambe.dir/parser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/parser.cpp.o -c /home/marijus/Documents/harambe/build/parser.cpp
 
 CMakeFiles/harambe.dir/parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/parser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp > CMakeFiles/harambe.dir/parser.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/build/parser.cpp > CMakeFiles/harambe.dir/parser.cpp.i
 
 CMakeFiles/harambe.dir/parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/parser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/build/parser.cpp -o CMakeFiles/harambe.dir/parser.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/build/parser.cpp -o CMakeFiles/harambe.dir/parser.cpp.s
 
 CMakeFiles/harambe.dir/tokens.cpp.o: CMakeFiles/harambe.dir/flags.make
 CMakeFiles/harambe.dir/tokens.cpp.o: tokens.cpp
 CMakeFiles/harambe.dir/tokens.cpp.o: parser.hpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/harambe.dir/tokens.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/tokens.cpp.o -c /home/marijus/Documents/KTU_2019_PKT2/build/tokens.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/harambe.dir/tokens.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/harambe.dir/tokens.cpp.o -c /home/marijus/Documents/harambe/build/tokens.cpp
 
 CMakeFiles/harambe.dir/tokens.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/harambe.dir/tokens.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/KTU_2019_PKT2/build/tokens.cpp > CMakeFiles/harambe.dir/tokens.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marijus/Documents/harambe/build/tokens.cpp > CMakeFiles/harambe.dir/tokens.cpp.i
 
 CMakeFiles/harambe.dir/tokens.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/harambe.dir/tokens.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/KTU_2019_PKT2/build/tokens.cpp -o CMakeFiles/harambe.dir/tokens.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marijus/Documents/harambe/build/tokens.cpp -o CMakeFiles/harambe.dir/tokens.cpp.s
 
 # Object files for target harambe
 harambe_OBJECTS = \
@@ -355,7 +355,7 @@ harambe: /usr/lib/llvm-10/lib/libLLVMDebugInfoMSF.a
 harambe: /usr/lib/llvm-10/lib/libLLVMSupport.a
 harambe: /usr/lib/llvm-10/lib/libLLVMDemangle.a
 harambe: CMakeFiles/harambe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable harambe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marijus/Documents/harambe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable harambe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/harambe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -370,6 +370,6 @@ CMakeFiles/harambe.dir/clean:
 CMakeFiles/harambe.dir/depend: parser.cpp
 CMakeFiles/harambe.dir/depend: parser.hpp
 CMakeFiles/harambe.dir/depend: tokens.cpp
-	cd /home/marijus/Documents/KTU_2019_PKT2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/marijus/Documents/KTU_2019_PKT2 /home/marijus/Documents/KTU_2019_PKT2 /home/marijus/Documents/KTU_2019_PKT2/build /home/marijus/Documents/KTU_2019_PKT2/build /home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles/harambe.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/marijus/Documents/harambe/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/marijus/Documents/harambe /home/marijus/Documents/harambe /home/marijus/Documents/harambe/build /home/marijus/Documents/harambe/build /home/marijus/Documents/harambe/build/CMakeFiles/harambe.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/harambe.dir/depend
 

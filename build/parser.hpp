@@ -34,8 +34,8 @@
 /* Undocumented macros, especially those whose name start with YY_,
    are private implementation details.  Do not rely on them.  */
 
-#ifndef YY_YY_HOME_MARIJUS_DOCUMENTS_KTU_2019_PKT2_BUILD_PARSER_HPP_INCLUDED
-# define YY_YY_HOME_MARIJUS_DOCUMENTS_KTU_2019_PKT2_BUILD_PARSER_HPP_INCLUDED
+#ifndef YY_YY_HOME_MARIJUS_DOCUMENTS_HARAMBE_BUILD_PARSER_HPP_INCLUDED
+# define YY_YY_HOME_MARIJUS_DOCUMENTS_HARAMBE_BUILD_PARSER_HPP_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 1
@@ -50,7 +50,7 @@ extern int yydebug;
 # define YYLTYPE_IS_DECLARED 1 /* alert the parser that we have our own definition */
 
 
-#line 54 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.hpp"
+#line 54 "/home/marijus/Documents/harambe/build/parser.hpp"
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
@@ -121,7 +121,7 @@ union YYSTYPE
 			int token;		
 		
 
-#line 125 "/home/marijus/Documents/KTU_2019_PKT2/build/parser.hpp"
+#line 125 "/home/marijus/Documents/harambe/build/parser.hpp"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -148,4 +148,4 @@ extern YYSTYPE yylval;
 extern YYLTYPE yylloc;
 int yyparse (void);
 
-#endif /* !YY_YY_HOME_MARIJUS_DOCUMENTS_KTU_2019_PKT2_BUILD_PARSER_HPP_INCLUDED  */
+#endif /* !YY_YY_HOME_MARIJUS_DOCUMENTS_HARAMBE_BUILD_PARSER_HPP_INCLUDED  */

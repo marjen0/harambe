@@ -66,10 +66,10 @@ RM = /snap/cmake/340/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/marijus/Documents/KTU_2019_PKT2
+CMAKE_SOURCE_DIR = /home/marijus/Documents/harambe
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/marijus/Documents/KTU_2019_PKT2/build
+CMAKE_BINARY_DIR = /home/marijus/Documents/harambe/build
 
 # Utility rule file for intrinsics_gen.
 
@@ -90,6 +90,6 @@ CMakeFiles/intrinsics_gen.dir/clean:
 .PHONY : CMakeFiles/intrinsics_gen.dir/clean
 
 CMakeFiles/intrinsics_gen.dir/depend:
-	cd /home/marijus/Documents/KTU_2019_PKT2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/marijus/Documents/KTU_2019_PKT2 /home/marijus/Documents/KTU_2019_PKT2 /home/marijus/Documents/KTU_2019_PKT2/build /home/marijus/Documents/KTU_2019_PKT2/build /home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles/intrinsics_gen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/marijus/Documents/harambe/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/marijus/Documents/harambe /home/marijus/Documents/harambe /home/marijus/Documents/harambe/build /home/marijus/Documents/harambe/build /home/marijus/Documents/harambe/build/CMakeFiles/intrinsics_gen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/intrinsics_gen.dir/depend
 

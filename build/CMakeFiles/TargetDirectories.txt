@@ -1,4 +1,4 @@
-/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles/rebuild_cache.dir
-/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles/harambe.dir
-/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles/edit_cache.dir
-/home/marijus/Documents/KTU_2019_PKT2/build/CMakeFiles/intrinsics_gen.dir
+/home/marijus/Documents/harambe/build/CMakeFiles/rebuild_cache.dir
+/home/marijus/Documents/harambe/build/CMakeFiles/harambe.dir
+/home/marijus/Documents/harambe/build/CMakeFiles/edit_cache.dir
+/home/marijus/Documents/harambe/build/CMakeFiles/intrinsics_gen.dir

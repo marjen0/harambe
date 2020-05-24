@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -std=gnu++17
 
 CXX_DEFINES = -DLLVM_NO_DUMP -D_DEBUG -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 
-CXX_INCLUDES = -I/include -I/home/marijus/Documents/KTU_2019_PKT2 -I/home/marijus/Documents/KTU_2019_PKT2/build 
+CXX_INCLUDES = -I/include -I/home/marijus/Documents/harambe -I/home/marijus/Documents/harambe/build 
 
