@@ -65,12 +65,12 @@ Value* Identifier::codeGen(CodeGenContext& context)
     } else {
         // get this ptr of struct/class etc...
         // it is a stack variable which is a reference to a class object
-        AllocaInst* alloc = context.findVariable(structName);
-        if (alloc != nullptr) {
-            std::string klassName = context.getType(structName);
-            Instruction * ptr = context.getKlassVarAccessInst(klassName, name, alloc);
-            return new LoadInst(ptr, name, false, context.currentBlock());
-        }
+        //AllocaInst* alloc = context.findVariable(structName);
+        //if (alloc != nullptr) {
+        //    std::string klassName = context.getType(structName);
+         //   Instruction * ptr = context.getKlassVarAccessInst(klassName, name, alloc);
+         //   return new LoadInst(ptr, name, false, context.currentBlock());
+        //}
     }
     Node::printError(location, "undeclared variable " + structName + "::" + name );
     context.addError();
@@ -355,32 +355,6 @@ Value* Assignment::codeGen(CodeGenContext& context)
             var = new AllocaInst( ty, 0, lhs->getName().c_str(), context.currentBlock() );
             context.locals()[lhs->getName()] = var;
         }
-    } else {
-        AllocaInst* varStruct = context.findVariable(lhs->getStructName()) ;
-        if( varStruct == nullptr ) {
-            // Check if the assignment is coming from a class member initialization.
-            // In that case the context varStruct is set, which points to the member variable.
-            if ( context.varStruct == nullptr)
-            {
-                Node::printError( location, "undeclared variable '" + lhs->getName() + "'" );
-                context.addError();
-                return nullptr;
-            }
-            varStruct = dyn_cast<AllocaInst>(context.varStruct);
-            if ( varStruct == nullptr )
-            {
-                Node::printError( location, "undeclared class of variable '" + lhs->getStructName() + "." + lhs->getName() + "'" );
-                context.addError();
-                return nullptr;
-            }
-            std::string klassName = lhs->getStructName() ;
-            Instruction* ptr = context.getKlassVarAccessInst( klassName, lhs->getName(), varStruct );
-            return new StoreInst( value, ptr, false, context.currentBlock() );
-
-        }
-        std::string klassName = context.getType(lhs->getStructName());
-        Instruction* ptr = context.getKlassVarAccessInst(klassName, lhs->getName(), varStruct);
-        return new StoreInst(value, ptr, false, context.currentBlock());
     }
     Type* varType = var->getType()->getElementType();
 
@@ -475,6 +449,61 @@ Value* Conditional::codeGen(CodeGenContext& context)
     }
 
     return mergeBlock; // dummy return, for now
+}
+
+Value* ForLoop::codeGen(CodeGenContext& context)
+{
+    Function* function = context.currentBlock()->getParent();
+
+    BasicBlock* assgBlock = BasicBlock::Create(context.getGlobalContext(), "assg");
+    BasicBlock* condBlock = BasicBlock::Create(context.getGlobalContext(), "cond", function);
+    BasicBlock* opBlock = BasicBlock::Create(context.getGlobalContext(), "op");
+    BasicBlock* loopBlock = BasicBlock::Create(context.getGlobalContext(), "loop");
+    BasicBlock* mergeBlock = BasicBlock::Create(context.getGlobalContext(), "merge");
+    BranchInst::Create(assgBlock,context.currentBlock());
+    
+    context.setInsertPoint(assgBlock);
+    Value* AssgValue = this->assigment->codeGen(context);
+    if(AssgValue == nullptr) {
+       Node::printError("Missing assigment in for loop.");
+       context.addError();
+       return nullptr;
+    }
+    BranchInst::Create(condBlock,context.currentBlock());
+
+    function->getBasicBlockList().push_back(condBlock);
+    context.setInsertPoint(condBlock);
+    Value* condValue = this->condition->codeGen(context);
+    if(condValue == nullptr) {
+       Node::printError("Code gen for condition expression in for loop failed.");
+       context.addError();
+       return nullptr;
+    }
+    BranchInst::Create(loopBlock,mergeBlock,condValue,context.currentBlock());
+
+    function->getBasicBlockList().push_back(loopBlock);
+    context.setInsertPoint(loopBlock);
+    Value* loopValue = this->ForBlock->codeGen(context);
+    if(condValue == nullptr) {
+       Node::printError("Code gen for for-block expression in for loop failed.");
+       context.addError();
+       return nullptr;
+    }
+    BranchInst::Create(opBlock,context.currentBlock());
+
+    function->getBasicBlockList().push_back(opBlock);
+    context.setInsertPoint(opBlock);
+    Value* opValue = this->operation->codeGen(context);
+    if(condValue == nullptr) {
+       Node::printError("Code gen for operation expression in for loop failed.");
+       context.addError();
+       return nullptr;
+    }
+    BranchInst::Create(condBlock,context.currentBlock());
+
+    function->getBasicBlockList().push_back(mergeBlock);
+    context.setInsertPoint(mergeBlock);
+    return NULL;
 }
 
 Value* WhileLoop::codeGen(CodeGenContext& context)

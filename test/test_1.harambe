@@ -1,0 +1,106 @@
+/..displayln("IT'S LONG COMMENT")
+../
+
+/..
+its long comment also
+displayln("IT'S LONG COMMENT ALSO")
+../
+
+`it's one line comment
+`displayln("IT'S ONE LINE COMMENT")
+
+string a = "Hello1"
+println(a)
+a = "Hello2"
+println(a)
+
+integer x1 = 5
+println("x1=%d",x1)
+
+integer x2 = 5 + x1
+println("x2=%d",x2)
+
+integer x3 = x2 - x1
+println("x3=%d",x3)
+
+float x4 = 0.5 * 0.7
+println("x4=%f",x4)
+
+`double numbers must be bouble structure : 00.0
+float x5 = 4.0 * 5.0
+println("x5=%f",x5)
+
+float x6 = 4.0 / 0.5
+println("x6=%f",x6)
+
+float x7 = x2 + x6
+println("x7=%f",x7)
+
+println("%d",7+5)
+
+`example of if:
+println("EXAMPLE OF IF")
+int x8 = 6
+
+print("x8=%d\n",x8)
+if (x8 < 6) 
+{
+	x8 = x8 + 6 
+	x8 = x8 * 2
+	printvalue(x8)
+}
+else
+{
+	x8=4
+}
+println("x8=%d",x8)
+integer x9 = (x1*x2)/x2
+println("x9=(x1*x2)/x2=%d",x9)
+
+`example of while:
+println("EXAMPLE OF WHILE")
+integer y1 = 10
+integer y2 = 7
+println("y1=%d, y2=%d",y1, y2)
+while (y1 > y2)
+{
+   	y1 = y1 - 1
+   	printvalue(y1)
+}
+else
+{
+  	println("y1>%d is equal to %d",y2, y1>20)
+}
+
+string fn = "test.txt"
+createfile(fn)
+appendfilestring(fn, "\ntest print\n")
+appendfileinteger(fn, 15)
+appendfilestring(fn, "\n")
+appendfiledouble(fn, 8.7)
+appendfilestring(fn, "\n")
+
+float d= 10.1
+println("pow %f is equal to %f",d, powdouble(d))
+
+float v1 = 8.8
+float v2 = 9.5
+println("less float from %f & %f is %f",v1, v2, lessdouble(v1,v2))
+
+
+function Sum (float a): float
+{
+	return a + a
+}
+
+function Minus (float a, float b): float
+{
+	float sum = Sum (a)
+	return lessdouble(sum,b*2)
+}
+
+println("Result %f", Minus (8.0, 9.0))
+
+help("")
+
+

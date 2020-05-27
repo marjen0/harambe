@@ -27,7 +27,7 @@ DECLSPEC double printdouble( double val )
  * it works like the C printf function and uses the same format string definition.
  */
 extern "C"
-DECLSPEC void display( char * str, ... )
+DECLSPEC void print( char * str, ... )
 {
     va_list argp;
     va_start( argp, str );
@@ -39,7 +39,7 @@ DECLSPEC void display( char * str, ... )
  * it works like the C printf function and uses the same format string definition.
  */
 extern "C"
-DECLSPEC void displayln( char * str, ... )
+DECLSPEC void println( char * str, ... )
 {
     char * outstr;
     va_list argp;

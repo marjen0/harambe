@@ -1,7 +1,6 @@
 #include "VisitorPrettyPrint.h"
 #include "AstNode.h"
 #include "FunctionDeclaration.h"
-#include "ClassDeclaration.h"
 
 namespace harambe {
 
@@ -185,6 +184,18 @@ void VisitorPrettyPrint::VisitVariablenDeclarationDeduce( VariableDeclarationDed
    }
 }
 
+void VisitorPrettyPrint::VisitForLoop( ForLoop* expr )
+{
+   out << indent_spaces(indent) << "Create " << expr->toString() << std::endl;
+   ++indent;
+   expr->getCondition()->Accept(*this);
+   expr->getAssigment()->Accept(*this);
+   expr->getOperation()->Accept(*this);
+   out << indent_spaces(indent) << "Create Loop Body" << std::endl;
+   expr->getForBlock()->Accept(*this);
+   --indent;
+}
+
 void VisitorPrettyPrint::VisitWhileLoop( WhileLoop* expr )
 {
    out << indent_spaces(indent) << "Create " << expr->toString() << std::endl;
@@ -196,17 +207,6 @@ void VisitorPrettyPrint::VisitWhileLoop( WhileLoop* expr )
    if(elseBlock) {
       out << indent_spaces(indent) << "Create Else Body" << std::endl;
       elseBlock->Accept(*this);
-   }
-   --indent;
-}
-
-void VisitorPrettyPrint::VisitClassDeclaration( ClassDeclaration* expr )
-{
-   out << indent_spaces(indent) << "Create " << expr->toString() << std::endl;
-   ++indent;
-   auto block = expr->getBlock();
-   if(block) {
-      block->Accept(*this);
    }
    --indent;
 }

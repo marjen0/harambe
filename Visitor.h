@@ -22,8 +22,8 @@ namespace harambe {
    class VariableDeclaration;
    class VariableDeclarationDeduce;
    class Conditional;
+   class ForLoop;
    class WhileLoop;
-   class ClassDeclaration;
    class Array;
    class ArrayAccess;
    class ArrayAddElement;
@@ -42,7 +42,6 @@ public:
    virtual void VisitBinaryOp( BinaryOp* expr ) = 0;
    virtual void VisitCompOperator( CompOperator* expr ) = 0;
    virtual void VisitBlock( Block* expr ) = 0;
-   /*virtual void VisitPrintDebug( PrintDebug* expr ) = 0;*/
    virtual void VisitStatement( Statement* stmt ) = 0;
    virtual void VisitReturnStatement( Return* retstmt ) = 0;
    virtual void VisitFunctionDeclaration( FunctionDeclaration* fndecl ) = 0;
@@ -52,8 +51,8 @@ public:
    virtual void VisitVariablenDeclaration( VariableDeclaration* expr ) = 0;
    virtual void VisitVariablenDeclarationDeduce( VariableDeclarationDeduce* expr ) = 0;
    virtual void VisitConditional( Conditional* expr ) = 0;
+   virtual void VisitForLoop( ForLoop* expr ) = 0;
    virtual void VisitWhileLoop( WhileLoop* expr ) = 0;
-   virtual void VisitClassDeclaration( ClassDeclaration* expr ) = 0 ;
    virtual void VisitArray(Array* expr) = 0;
    virtual void VisitArrayAccess(ArrayAccess* expr) = 0;
    virtual void VisitArrayAddElement(ArrayAddElement* expr) = 0;

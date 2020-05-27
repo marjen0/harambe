@@ -85,18 +85,18 @@ void CodeGenContext::setupBuiltIns()
 
    std::vector<Type*> argTypesInt8Ptr(1, Type::getInt8PtrTy(getGlobalContext()));
    ft = FunctionType::get(Type::getVoidTy(getGlobalContext()), argTypesInt8Ptr, true);
-   f  = Function::Create(ft, Function::ExternalLinkage, MAKE_LLVM_EXTERNAL_NAME(display), getModule());
+   f  = Function::Create(ft, Function::ExternalLinkage, MAKE_LLVM_EXTERNAL_NAME(print), getModule());
    i  = f->arg_begin();
    if (i != f->arg_end())
       i->setName("format_str");
-   builtins.push_back({f, (void*)display});
+   builtins.push_back({f, (void*)print});
 
    ft = FunctionType::get(Type::getVoidTy(getGlobalContext()), argTypesInt8Ptr, true);
-   f  = Function::Create(ft, Function::ExternalLinkage, MAKE_LLVM_EXTERNAL_NAME(displayln), getModule());
+   f  = Function::Create(ft, Function::ExternalLinkage, MAKE_LLVM_EXTERNAL_NAME(println), getModule());
    i  = f->arg_begin();
    if (i != f->arg_end())
       i->setName("format_str");
-   builtins.push_back({f, (void*)displayln});
+   builtins.push_back({f, (void*)println});
 
 /*createfile*/
    ft = FunctionType::get(Type::getVoidTy(getGlobalContext()), argTypesInt8Ptr, true);
@@ -388,6 +388,8 @@ Type* CodeGenContext::typeOf(const std::string name)
 {
    if (name.compare("int") == 0) {
       return getGenericIntegerType();
+   } else if (name.compare("float") == 0) {
+      return Type::getDoubleTy(getGlobalContext());
    } else if (name.compare("double") == 0) {
       return Type::getDoubleTy(getGlobalContext());
    } else if (name.compare("string") == 0) {
@@ -396,10 +398,6 @@ Type* CodeGenContext::typeOf(const std::string name)
       return Type::getInt1Ty(getGlobalContext());
    } else if (name.compare("void") == 0) {
       return Type::getVoidTy(getGlobalContext());
-   }
-   llvm::Type* ty = getModule()->getTypeByName("class." + name);
-   if (ty != nullptr) {
-      return ty;
    }
    return Type::getVoidTy(getGlobalContext());
 }

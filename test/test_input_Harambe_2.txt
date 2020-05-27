@@ -1,0 +1,34 @@
+`tai yra komentaras
+
+integer age = 5
+string name = "name"
+float speed = 56.78
+boolean = isTrue = true
+`list newList = |for n in [1, 2, 3, 4] if n > 2 toList|
+
+if(speed > 50){
+	println("Over the speed limit, officer")
+}
+else{
+	println("Under the speed limit, officer")
+}
+
+for(integer i = 0 to 8){
+	sayHello("Hello world!")
+}
+
+integer sum = 0
+for(integer i = 0; i < 8; i++){
+	if(isTrue){
+		sum = sum + add(1, 1)
+	}
+}
+
+function add(integer a, integer b): integer{
+	return a + b
+}
+
+function sayHello(string greeting): integer{
+	println(greeting)
+	return 0
+}
