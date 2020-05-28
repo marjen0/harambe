@@ -126,6 +126,8 @@ conditional_if 	: TIF TLPAREN expr TRPAREN block TELSE block {$$ = new harambe::
 while 		: TWHILE TLPAREN expr TRPAREN block TELSE block {$$ = new harambe::WhileLoop($3,$5,$7);}
 		| TWHILE TLPAREN expr TRPAREN block {$$ = new harambe::WhileLoop($3,$5);}
 		; 
+	
+
 
 var_decl 	: ident ident { $$ = new harambe::VariableDeclaration($1, $2, @$); }
 		| ident ident TEQUAL expr { $$ = new harambe::VariableDeclaration($1, $2, $4, @$); }
@@ -213,5 +215,7 @@ array_access	: ident TLBRACKET TINTEGER TRBRACKET { $$ = new harambe::ArrayAcces
 
 range_expr 	: TLBRACKET expr TRANGE expr TRBRACKET {$$ = new harambe::Range($2, $4, @$);}
 		;
+		
+/*added*/
 
 %%

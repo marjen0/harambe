@@ -178,6 +178,7 @@ import			BEGIN(incl);
 "while"			return TOKEN(TWHILE);
 	/* "createfile"		return TOKEN(TCREATEFILE); */	/*create file*/
 	/*"appendfile"		return TOKEN(TAPPENDFILE); */
+"for"			return TOKEN(TFOR) /*dar neiyvendinta*/
 "is"			return TOKEN(IS);
 "true"			SAVE_TOKEN; return TBOOL;
 "false"			SAVE_TOKEN; return TBOOL;
