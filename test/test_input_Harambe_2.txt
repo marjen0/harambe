@@ -1,12 +1,12 @@
 `tai yra komentaras
 
-int i = 0
-int age = 5
+integer i = 0
+integer age = 5
 string name = "name"
 double speed = 56.78
 `list newList = |for n in [1, 2, 3, 4] if n > 2 toList|
 
-function add(int a, int b): int{
+function add(integer a, integer b): integer{
 	return a + b
 }
 

@@ -5,10 +5,10 @@ println(a)
 a = "Hello world 2"
 println(a)
 
-int x1 = 5
+integer x1 = 5
 println("x1=%d",x1)
 
-int x2 = 5 + x1
+integer x2 = 5 + x1
 println("x2=%d",x2)
 
 double x4 = 0.5 * 0.7
@@ -16,7 +16,7 @@ println("x4=%f",x4)
 
 
 println("IF TEST")
-int x8 = 6
+integer x8 = 6
 print("x8=%d\n",x8)
 
 if (x8 < 6) 
@@ -34,8 +34,8 @@ println("x8=%d",x8)
 
 
 println("WHILE TEST")
-int y1 = 10
-int y2 = 7
+integer y1 = 10
+integer y2 = 7
 println("y1=%d, y2=%d",y1, y2)
 while (y1 > y2)
 {

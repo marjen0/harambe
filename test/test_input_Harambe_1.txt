@@ -1,11 +1,11 @@
 `declaration
 double val = 2.5
 var numbers = [1, 2, 3, 4]
-int i = 0
+integer i = 0
 
 println("Array number %d",numbers[3])
 
-function operation(double val, int i): double{
+function operation(double val, integer i): double{
 	`declarations
 	double res
 	`statments
