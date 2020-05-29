@@ -13,7 +13,7 @@ class VisitorSyntaxCheck : public Visitor
 {
    int syntaxErrors;
    std::vector<YYLTYPE> ReturnStatementLocations;
-   std::unordered_set<std::string> TypeNames{ "int","double","string","boolean","var" };
+   std::unordered_set<std::string> TypeNames{ "integer","double","string","boolean","var" };
 public:
    VisitorSyntaxCheck();
    virtual ~VisitorSyntaxCheck() {}

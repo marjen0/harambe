@@ -386,7 +386,7 @@ Type* CodeGenContext::typeOf(const Identifier& type) { return typeOf(type.getNam
 
 Type* CodeGenContext::typeOf(const std::string name)
 {
-   if (name.compare("int") == 0) {
+   if (name.compare("integer") == 0) {
       return getGenericIntegerType();
    } else if (name.compare("float") == 0) {
       return Type::getDoubleTy(getGlobalContext());
