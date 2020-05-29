@@ -145,8 +145,8 @@ import			BEGIN(incl);
 				/*}*/
 			}
 
-<normal>"\n"			{ current_line_indent = 0; BEGIN( indent); yycolumn = 1; }
-<<EOF>>			{ 
+<normal>"\n"		{ current_line_indent = 0; BEGIN( indent); yycolumn = 1; }
+<<EOF>>		{ 
 				yypop_buffer_state();
 				fileNames.pop();
 				yylineno = lineNo.top();
@@ -168,15 +168,16 @@ import			BEGIN(incl);
 "#debugend"		return TOKEN(DEBUGEND);
 "{"			return TOKEN(TBLOCKSTART);
 "}"			return TOKEN(TBLOCKEND);
-"return"[ \t]*[\n]		return TOKEN(TRETURN_SIMPLE); 	/*return*/
-"return"			return TOKEN(TRETURN);		/*return*/
+"return"[ \t]*[\n]	return TOKEN(TRETURN_SIMPLE);  /*return*/
+"return"		return TOKEN(TRETURN);		/*return*/
 "!!"			return TOKEN(TNOT); 		/*not*/
 "&&"			return TOKEN(TAND); 		/*and*/
 "||"			return TOKEN(TOR); 		/*or*/
-"function"			return TOKEN(TDEF); 		/*@ - to call a function*/
+"function"		return TOKEN(TDEF); 		/*@ - to call a function*/
 "var"			return TOKEN(TVAR);
-"while"			return TOKEN(TWHILE);
-	/* "createfile"		return TOKEN(TCREATEFILE); */	/*create file*/
+"while"		return TOKEN(TWHILE);
+"for"			return TOKEN(TFOR);
+	/* "createfile"	return TOKEN(TCREATEFILE); */	/*create file*/
 	/*"appendfile"		return TOKEN(TAPPENDFILE); */
 "for"			return TOKEN(TFOR) /*dar neiyvendinta*/
 "is"			return TOKEN(IS);
@@ -185,7 +186,7 @@ import			BEGIN(incl);
 "to"			return TOKEN(TTO);
 `.*	 		/* comments one line til nl */
 [ \t\n]			/* ignore */;
-[a-zA-Z_][a-zA-Z0-9_&%\$\?\-]*	SAVE_TOKEN; return TIDENTIFIER;
+[a-zA-Z_][a-zA-Z0-9_&%\$\?\-]* SAVE_TOKEN; return TIDENTIFIER;
 -?[0-9]+		SAVE_TOKEN; return TINTEGER;
 {number}		SAVE_TOKEN; return TDOUBLE;
 "->"			return TOKEN(TRANGE);
@@ -207,6 +208,7 @@ import			BEGIN(incl);
 "*"	 		return TOKEN(TMUL);
 "/"	 		return TOKEN(TDIV);
 ":"	 		return TOKEN(TCOLON);
+";"	 		return TOKEN(TSEMI);
 "["	 		return TOKEN(TLBRACKET);
 "]"	 		return TOKEN(TRBRACKET);
 .		 	printf("line %d, len %d Unknown token %s !\n", yylineno, yyleng, yytext); yyterminate();

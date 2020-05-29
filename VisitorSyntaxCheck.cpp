@@ -1,7 +1,6 @@
 #include "VisitorSyntaxCheck.h"
 #include "AstNode.h"
 #include "FunctionDeclaration.h"
-#include "ClassDeclaration.h"
 
 namespace harambe {
 VisitorSyntaxCheck::VisitorSyntaxCheck() : syntaxErrors(0) 
@@ -114,14 +113,14 @@ void VisitorSyntaxCheck::VisitVariablenDeclarationDeduce( VariableDeclarationDed
 {
 }
 
+void VisitorSyntaxCheck::VisitForLoop( ForLoop* expr )
+{
+}
+
 void VisitorSyntaxCheck::VisitWhileLoop( WhileLoop* expr )
 {
 }
 
-void VisitorSyntaxCheck::VisitClassDeclaration( ClassDeclaration* expr )
-{
-   TypeNames.emplace(expr->getIdentifier()->getName());
-}
 void VisitorSyntaxCheck::VisitArray(Array* expr)
 {
    auto listexprs = expr->getExpressions();

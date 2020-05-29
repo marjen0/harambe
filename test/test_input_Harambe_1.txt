@@ -1,0 +1,25 @@
+`declaration
+float val = 2.5
+float res[10];
+integer i;
+
+`statments
+for(i = 0; i < 10; i++){
+	res[i] = operation(val, i)
+	val = res[i]
+	println(res[i])
+	println('\n')
+}
+
+`functions
+function temp(): integer{
+	return 0
+}
+
+function operation(float val, integer i): float{
+	`declarations
+	float res;
+	`statments
+	res = val * i + i
+	return res
+}

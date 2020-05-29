@@ -33,8 +33,8 @@ public:
    void VisitVariablenDeclaration(VariableDeclaration* expr);
    void VisitVariablenDeclarationDeduce(VariableDeclarationDeduce* expr);
    void VisitConditional(Conditional* expr);
+   void VisitForLoop(ForLoop* expr);
    void VisitWhileLoop(WhileLoop* expr);
-   void VisitClassDeclaration(ClassDeclaration* expr);
    void VisitArray(Array* expr);
    void VisitArrayAccess(ArrayAccess* expr);
    void VisitArrayAddElement(ArrayAddElement* expr);

@@ -8,8 +8,8 @@
 
 extern "C" DECLSPEC int printvalue( int val );
 extern "C" DECLSPEC double printdouble( double val );
-extern "C" DECLSPEC void display( char * str, ... );
-extern "C" DECLSPEC void displayln( char * str, ... );
+extern "C" DECLSPEC void print( char * str, ... );
+extern "C" DECLSPEC void println( char * str, ... );
 extern "C" DECLSPEC void createfile( char * str);
 extern "C" DECLSPEC void appendfilestring(  char * fn, char * val);
 extern "C" DECLSPEC void appendfileinteger(  char * fn, int val);

@@ -37,7 +37,6 @@ set(SOURCES_COMMON
             AstNode.cpp
             Declaration.cpp
             FunctionDeclaration.cpp
-            ClassDeclaration.cpp
             CodeGenContext.cpp
             VisitorSyntaxCheck.cpp
             VisitorPrettyPrint.cpp
@@ -52,7 +51,6 @@ set(HEADER_COMMON
             buildins.h
             AstNode.h
             FunctionDeclaration.h
-            ClassDeclaration.h
             CodeGenContext.h
             Visitor.h
             VisitorSyntaxCheck.h

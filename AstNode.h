@@ -45,7 +45,6 @@ enum class NodeType
 {
     expression,
     variable,
-    klass,
     function,
     integer,
     decimal,
@@ -468,6 +467,29 @@ public:
    virtual CompOperator* getCompOperator() { return cmpOp; }
    virtual Expression* getThen() { return thenExpr; }
    virtual Expression* getElse() { return elseExpr; }
+};
+
+class ForLoop : public Statement
+{
+   Expression* assigment;
+   Expression *condition;
+   Expression *operation;
+   Block *ForBlock;
+public:
+   ForLoop(Expression* assig, Expression *cond, Expression *oper, Block *forBlock)
+   : assigment(assig) , condition(cond), operation(oper), ForBlock(forBlock) {}
+   virtual ~ForLoop()
+   {
+      delete assigment; delete condition; delete operation; delete ForBlock;
+   }
+   virtual llvm::Value* codeGen(CodeGenContext& context);
+   NodeType getType() { return NodeType::expression; }
+   virtual std::string toString() { return "for loop "; }
+   virtual Expression* getAssigment() { return assigment; }
+   virtual Expression* getCondition() { return condition; }
+   virtual Expression* getOperation() { return operation; }
+   virtual Block* getForBlock() { return ForBlock; }
+   virtual void Accept(Visitor& v) { v.VisitForLoop(this); }
 };
 
 class WhileLoop : public Statement

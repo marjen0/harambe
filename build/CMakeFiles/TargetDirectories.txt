@@ -1,4 +1,0 @@
-/home/marijus/Documents/harambe/build/CMakeFiles/rebuild_cache.dir
-/home/marijus/Documents/harambe/build/CMakeFiles/harambe.dir
-/home/marijus/Documents/harambe/build/CMakeFiles/edit_cache.dir
-/home/marijus/Documents/harambe/build/CMakeFiles/intrinsics_gen.dir

@@ -55,26 +55,7 @@ Value* VariableDeclaration::codeGen(CodeGenContext& context)
         id = nullptr;
         assignmentExpr = nullptr;
     }
-    else if ( context.varStruct )
-    {
-        // The variable gets nothing assigned so 
-        // auto assign defaults (member assignments) on classes ctor call.
-        auto stmts = context.getKlassInitCode(type->getName());
-        for ( auto assign : stmts )
-        {
-            assign->codeGen( context );
-        }
-
-        // Generate function call to the ctor, if exists.
-        Function *fn = context.getModule()->getFunction( "__init__%" + type->getName() );
-        if ( fn != nullptr )
-        {
-            std::vector<Value*> args;
-            args.push_back( context.varStruct );
-            CallInst *call = CallInst::Create( fn, args, "", context.currentBlock() );
-        }
-        context.varStruct = nullptr;
-    }
+    
     assert(val != nullptr);
     return val;
 }
