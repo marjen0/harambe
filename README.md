@@ -1,4 +1,4 @@
-#Komanda - "Harambedid911"
+# Komanda - "Harambedid911"
 ## Nariai ##
 - Justas Radkevičius, IFF-7/9 gr.
 - Marijus Jenulis, IFF-7/3 gr.
