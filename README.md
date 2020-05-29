@@ -49,7 +49,7 @@ pateikta aukščiau)
 ```
 3. Rezultatai spausdinami į terminalą ir į failą ```fib.txt``` esantį ```build``` kataloge
 
-![image](pictures/Screenshot from 2020-05-29 13-21-23.png)
-![Image](pictures/Screenshot from 2020-05-29 13-20-05.png)
+![image of results1](https://github.com/marjen0/harambe/pictures/Screenshot from 2020-05-29 13-21-23.png)
+![Image of results2](https://github.com/marjen0/harambe/pictures/Screenshot from 2020-05-29 13-20-05.png)
 
 
