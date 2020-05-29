@@ -5,12 +5,12 @@ string fn = "fib.txt"
 createfile(fn)
 
 `ELEMENTS OUT
-int n = 10
+integer n = 10
 
 /..
 FIBONACCI RECURSIVE:
 ../
-function FibonacciRecursive (int x) : int
+function FibonacciRecursive (integer x) : integer
 {
 	if (x == 0)
 	{
@@ -27,14 +27,14 @@ function FibonacciRecursive (int x) : int
 /..
 FIBONACCI INTERATIVE:
 ../
-function FibonacciInterative (int n) : int
+function FibonacciInterative (integer n) : integer
 {
-	int x1 = 0
-	int x2 = 1
-	int i = 0
+	integer x1 = 0
+	integer x2 = 1
+	integer i = 0
 	while (i < n)
 	{
-		int temp = x1
+		integer temp = x1
 		x1 = x2
 		x2 = x2 + temp
 		i = i + 1
@@ -42,8 +42,8 @@ function FibonacciInterative (int n) : int
 	return x1
 }
 
-int fib = 0
-int i = 0
+integer fib = 0
+integer i = 0
 println("\nFibonacci recursive: %d", n)
 appendfilestring(fn, "\nFibonacci recursive:")
 while (i<n)
