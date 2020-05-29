@@ -1,3 +1,11 @@
-int i = 10
-float y = 20.0
-printvalue(y)
+double b = 2.2
+function Sum(double a): double
+{
+  return a + a
+}
+
+println("%f",b)
+
+double d = Sum(b)
+
+println("%f",d)

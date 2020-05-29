@@ -1,25 +1,21 @@
 `declaration
-float val = 2.5
-float res[10];
-integer i;
+double val = 2.5
+var numbers = [1, 2, 3, 4]
+int i = 0
 
-`statments
-for(i = 0; i < 10; i++){
-	res[i] = operation(val, i)
-	val = res[i]
-	println(res[i])
-	println('\n')
-}
+println("Array number %d",numbers[3])
 
-`functions
-function temp(): integer{
-	return 0
-}
-
-function operation(float val, integer i): float{
+function operation(double val, int i): double{
 	`declarations
-	float res;
+	double res
 	`statments
 	res = val * i + i
 	return res
+}
+
+`statments
+while(i < 10){
+	val = operation(val, i)
+	println("%f",val)
+	i = i + 1
 }
