@@ -1,172 +1,55 @@
+#Komanda - "Harambedid911"
+## Nariai ##
+- Justas Radkevičius, IFF-7/9 gr.
+- Marijus Jenulis, IFF-7/3 gr.
+- Gintautas Lasevičius, IFF-7/6 gr.
+
+## Reikalavimai ##
+- Ubuntu 20.04 (Windows netestuota)
+- cmake 3.17.3
+- GNU Make 4.2.1 
+- Flex 2.6.4
+- Bison 3.5.1
+- LLVM 10.0
+- build-essentials
+- zlib1g-dev
+
+## Kompiliavimas
+1. Klonuoti šia repositoriją.
+```
+https://bitbucket.org/ktu_pkt/projektas2020/src/Harambedid911/
+```
+2. Atidaryti terminalą pagrindiniame kataloge "harambe"
+2. Sukurti "build" katalogą
+```
+mkdir build
+```
+3. Įeiti į build katalogą
+```
+cd build
+```
+4. paleisti sugeneruoti Makefile failą
+```
+cmake ..
+```
+
+5. Paleisti make
+```
+make
+```
+6. Viskas. build kataloge turėtų būti harambe.exe failas
+
+## Testavimas
+### Fibonacci sekos skaičiavimas
+1. Sukompiluoti projektą (kaip tai padaryti yra 
+pateikta aukščiau)
+2. Iš "build katalogo įvykdyti komandą:"
+```
+./harambe ../test/fibonacci.harambe -q
+```
+3. Rezultatai spausdinami į terminalą ir į failą ```fib.txt``` esantį ```build``` kataloge
+
+![image](pictures/Screenshot from 2020-05-29 13-21-23.png)
+![Image](pictures/Screenshot from 2020-05-29 13-20-05.png)
 
 
-BUILD COMPILATOR:
-	clone git in pkt2 catalog
-	create build catalog
-	go to build catalog
-		cmake ..	
-		make
-
-MOVE COMPILED FILE FOR TO TESTING:
-	from pkt2 -> build
-	pkt2 -> test
-	current catalog build:
-		cp pkt2 ../test/pkt2
-
-RUN FILE FOR TESTING:
-	from directory pkt2 -> test
-	./pkt2 test.pkt2 -d
-
-
-CATALOG TREE:
-	tree -d pkt2
-
-		    └── pkt2
-			├── build
-			│   └── CMakeFiles
-			│       ├── 3.10.2
-			│       │   ├── CompilerIdC
-			│       │   │   └── tmp
-			│       │   └── CompilerIdCXX
-			│       │       └── tmp
-			│       ├── CMakeTmp
-			│       └── pkt2.dir
-			└── test
-NEEDED FILES:
-
-		    └── pkt2
-			├── AstNode.cpp
-			├── AstNode.h
-			├── build
-			├── parser.y
-			├── test
-			│   ├── pkt2
-			│   └── test.pkt2
-			├── tokens.l
-
-FILES TREE:
-	tree pkt2
-
-		    └── pkt2
-			├── Array.cpp
-			├── AstNode.cpp
-			├── AstNode.h
-			├── build
-			│   ├── CMakeCache.txt
-			│   ├── CMakeFiles
-			│   │   ├── 3.10.2
-			│   │   │   ├── CMakeCCompiler.cmake
-			│   │   │   ├── CMakeCXXCompiler.cmake
-			│   │   │   ├── CMakeDetermineCompilerABI_C.bin
-			│   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
-			│   │   │   ├── CMakeSystem.cmake
-			│   │   │   ├── CompilerIdC
-			│   │   │   │   ├── a.out
-			│   │   │   │   ├── CMakeCCompilerId.c
-			│   │   │   │   └── tmp
-			│   │   │   └── CompilerIdCXX
-			│   │   │       ├── a.out
-			│   │   │       ├── CMakeCXXCompilerId.cpp
-			│   │   │       └── tmp
-			│   │   ├── cmake.check_cache
-			│   │   ├── CMakeDirectoryInformation.cmake
-			│   │   ├── CMakeOutput.log
-			│   │   ├── CMakeRuleHashes.txt
-			│   │   ├── CMakeTmp
-			│   │   ├── feature_tests.bin
-			│   │   ├── feature_tests.c
-			│   │   ├── feature_tests.cxx
-			│   │   ├── Makefile2
-			│   │   ├── Makefile.cmake
-			│   │   ├── pkt2.dir
-			│   │   │   ├── Array.cpp.o
-			│   │   │   ├── AstNode.cpp.o
-			│   │   │   ├── buildins.cpp.o
-			│   │   │   ├── build.make
-			│   │   │   ├── ClassDeclaration.cpp.o
-			│   │   │   ├── cmake_clean.cmake
-			│   │   │   ├── CodeGenContext.cpp.o
-			│   │   │   ├── CXX.includecache
-			│   │   │   ├── Declaration.cpp.o
-			│   │   │   ├── DependInfo.cmake
-			│   │   │   ├── depend.internal
-			│   │   │   ├── depend.make
-			│   │   │   ├── flags.make
-			│   │   │   ├── FunctionDeclaration.cpp.o
-			│   │   │   ├── GetOpt.cpp.o
-			│   │   │   ├── link.txt
-			│   │   │   ├── main.cpp.o
-			│   │   │   ├── parser.cpp.o
-			│   │   │   ├── progress.make
-			│   │   │   ├── Range.cpp.o
-			│   │   │   ├── tokens.cpp.o
-			│   │   │   ├── VisitorPrettyPrint.cpp.o
-			│   │   │   └── VisitorSyntaxCheck.cpp.o
-			│   │   ├── progress.marks
-			│   │   └── TargetDirectories.txt
-			│   ├── cmake_install.cmake
-			│   ├── Makefile
-			│   ├── parser.cpp
-			│   ├── parser.hpp
-			│   ├── parser.output
-			│   └── tokens.cpp
-			├── buildins.cpp
-			├── buildins.h
-			├── ClassDeclaration.cpp
-			├── ClassDeclaration.h
-			├── CMakeLists.txt
-			├── CodeGenContext.cpp
-			├── CodeGenContext.h
-			├── config.h
-			├── config.in
-			├── Declaration.cpp
-			├── FunctionDeclaration.cpp
-			├── FunctionDeclaration.h
-			├── GetOpt.cpp
-			├── GetOpt.h
-			├── LICENSE
-			├── main.cpp
-			├── main.h
-			├── parser.y
-			├── Range.cpp
-			├── README.md
-			├── test
-			│   ├── pkt2
-			│   └── test.pkt2
-			├── tokens.l
-			├── Visitor.h
-			├── VisitorPrettyPrint.cpp
-			├── VisitorPrettyPrint.h
-			├── VisitorSyntaxCheck.cpp
-			└── VisitorSyntaxCheck.h
-
-Comments:
-	long comment:
-		/..
-		../
-		NOTE! "../" should be in new line
-	onle line comment: 
-		~
-	example:
-		/..displayln("IT'S LONG COMMENT")
-		../
-
-		/..
-		its long comment also
-		displayln("IT'S LONG COMMENT ALSO")
-		../
-
-		~it's one line comment
-		~displayln("IT'S ONE LINE COMMENT")
-
-Functions:
-	int printvalue( int val );
-	double printdouble( double val );
-	display( char * str, ... );
-	displayln( char * str, ... );
-	createfile( char * str);
-	appendfilestring(  char * fn, char * val);
-	appendfileinteger(  char * fn, int val);
-	appendfiledouble(  char * fn, double val);
-	double powdouble( double val );
-	double lessdouble( double val1 , double val2);
