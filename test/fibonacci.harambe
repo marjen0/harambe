@@ -10,7 +10,7 @@ int n = 10
 /..
 FIBONACCI RECURSIVE:
 ../
-function FibonacciRecursive (int x) return int
+function FibonacciRecursive (int x) : int
 {
 	if (x == 0)
 	{
@@ -27,7 +27,7 @@ function FibonacciRecursive (int x) return int
 /..
 FIBONACCI INTERATIVE:
 ../
-function FibonacciInterative (int n) return int
+function FibonacciInterative (int n) : int
 {
 	int x1 = 0
 	int x2 = 1
@@ -44,25 +44,25 @@ function FibonacciInterative (int n) return int
 
 int fib = 0
 int i = 0
-displayln("\nFibonacci recursive: %d", n)
+println("\nFibonacci recursive: %d", n)
 appendfilestring(fn, "\nFibonacci recursive:")
 while (i<n)
 {
 	fib =FibonacciRecursive(i)
-	displayln("%d", fib)
+	println("%d", fib)
 	appendfilestring(fn, "\n")
 	appendfileinteger(fn, fib)
 	i = i +1
 }
 
-displayln("\nFibonacci interative: %d", n)
+println("\nFibonacci interative: %d", n)
 appendfilestring(fn, "\nFibonacci interative:\n")
 
 i = 0
 while (i < n)
 {
 	fib =FibonacciInterative(i)
-	displayln("%d", fib)
+	println("%d", fib)
 	appendfilestring(fn, "\n")
 	appendfileinteger(fn, fib)
 	i = i + 1
